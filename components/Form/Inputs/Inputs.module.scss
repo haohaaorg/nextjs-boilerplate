@@ -1,0 +1,12 @@
+.input {
+  color: $input-color;
+  &::placeholder {
+    color: $input-placeholder;
+  }
+}
+
+.visibility {
+  color: $input-icon;
+  @extend .pointer;
+  @include box(1.25rem, 1.25rem);
+}

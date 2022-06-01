@@ -1,0 +1,22 @@
+@keyframes fade-in {
+	0% {
+		opacity: var(--o);
+		transform: translate(var(--x), var(--y));
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+		transform: translate(0);
+	}
+	100% {
+		opacity: var(--o);
+		transform: translate(var(--x), var(--y));
+	}
+}

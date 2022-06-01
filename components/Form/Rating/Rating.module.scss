@@ -1,0 +1,16 @@
+.list {
+  @include flex();
+  @include space-x(0.25rem);
+}
+
+.star {
+  @extend .pointer;
+  @include box(1.5rem, 1.5rem);
+  fill: transparent;
+  stroke: $input-icon;
+  transition: all 0.25s;
+  &.active {
+    fill: $input-star;
+    stroke: $input-star;
+  }
+}

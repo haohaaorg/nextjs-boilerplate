@@ -1,0 +1,16 @@
+.root {
+  @include flex();
+  @include flex-align(center, center);
+  @include box(100%, 100vh);
+}
+
+.form {
+  @include space-y(1.5rem);
+  @include width(100%, 25rem);
+  padding: 2rem;
+  border: 1px solid $gray-200;
+  border-radius: $radius * 2;
+}
+
+.submit {
+}

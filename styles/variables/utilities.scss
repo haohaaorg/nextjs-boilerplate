@@ -1,0 +1,58 @@
+$radius: 0.25rem;
+
+@mixin flex($dir: null, $wrap: null) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+}
+
+@mixin iflex($dir: null, $wrap: null) {
+  display: inline-flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-align($justify, $align: null) {
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin box($w, $h: null, $r: null) {
+  width: $w;
+  height: $h;
+  border-radius: $r;
+}
+
+@mixin ring($width, $color: null, $offset-width: 0, $offset-color: #fff) {
+  $ring: 0 0 0 $width + $offset-width $color;
+  $offset: 0 0 0 $offset-width $offset-color;
+  box-shadow: $offset, $ring;
+}
+
+@mixin let($vars) {
+  @each $name, $value in $vars {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin width($width, $max-w, $min-w: null) {
+  width: $width;
+  max-width: $max-w;
+  min-width: $min-w;
+}
+
+@mixin space-x($value) {
+  > :not(:last-child) {
+    margin-right: $value;
+  }
+}
+
+@mixin space-y($value) {
+  > :not(:last-child) {
+    margin-bottom: $value;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,62 @@
+.root {
+  @include flex();
+  @include flex-align(center, center);
+  @include let(
+    (
+      color: $primary,
+    )
+  );
+
+  width: 100%;
+  cursor: pointer;
+  row-gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: $radius;
+
+  &.text {
+    color: var(--color);
+    background: transparent;
+    --border-color: transparent;
+  }
+  &.filled {
+    color: #fff;
+    background: var(--color);
+    --border-color: var(--color);
+  }
+  &.outline {
+    color: var(--color);
+    background: transparent;
+    --border-color: var(--color);
+  }
+}
+
+.loading {
+  cursor: wait;
+}
+
+.disable {
+  cursor: not-allowed;
+  @include let(
+    (
+      color: $gray-400,
+    )
+  );
+}
+
+.spinner {
+  @include box(1.25rem, 1.25rem);
+  border-radius: 50%;
+  border: 3px solid rgba(#fff, 0.5);
+  border-top-color: #fff;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

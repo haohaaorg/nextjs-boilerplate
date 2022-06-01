@@ -1,0 +1,35 @@
+.viewport {
+  @include flex(column-reverse);
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  padding: 0.5rem;
+}
+
+.item {
+  min-width: 20rem;
+  margin: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: $gray-200;
+  &.success {
+    color: $green;
+  }
+  &.warning {
+    color: $yellow;
+  }
+  &.error {
+    color: $red;
+  }
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: $gray-600;
+  font-size: 0.75rem;
+}

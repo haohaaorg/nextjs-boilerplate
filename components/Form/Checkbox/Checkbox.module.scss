@@ -1,0 +1,29 @@
+.list {
+  @include flex();
+  margin: -0.25rem;
+  user-select: none;
+}
+
+.checkbox {
+  @include iflex();
+  @include flex-align(null, center);
+  @include space-x(0.125rem);
+  color: $input-color;
+  margin: 0.25rem;
+}
+
+.icon {
+  width: 1rem;
+  stroke: none;
+  border: 1px solid $input-border;
+  border-radius: 3px;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.active {
+  .icon {
+    stroke: #fff;
+    background: $input-active;
+  }
+}

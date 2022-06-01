@@ -1,0 +1,15 @@
+@import 'normalize';
+
+html {
+  @extend .font-sans;
+}
+
+:root {
+  --o: 1;
+  --x: 0;
+  --y: 1;
+}
+
+.icon {
+  @include box(1.25rem, 1.25rem);
+}

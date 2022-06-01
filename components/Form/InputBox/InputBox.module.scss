@@ -1,0 +1,18 @@
+.root {
+  @include flex();
+  @include flex-align(null, stretch);
+  @include space-x(0.25rem);
+  height: 2.5rem;
+  padding: 0 0.5rem;
+  border: 1.5px solid $input-border;
+  border-radius: $radius;
+  transition: all 0.25s;
+  &:focus-within {
+    border-color: $input-focus-border;
+  }
+}
+
+.addon {
+  @include iflex();
+  @include flex-align(center, center);
+}

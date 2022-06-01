@@ -1,0 +1,34 @@
+@import 'modern-normalize/modern-normalize.css';
+
+html {
+  line-height: 1;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  padding: unset;
+  background: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  cursor: inherit;
+}

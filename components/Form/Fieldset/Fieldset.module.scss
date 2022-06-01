@@ -1,0 +1,24 @@
+.label {
+  color: $input-label;
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+.message {
+  color: $gray-200;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.error {
+  .message {
+    color: $input-error;
+  }
+  .input,
+  .select {
+    border-color: rgba($input-error, 0.75);
+  }
+}

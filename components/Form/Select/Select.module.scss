@@ -1,0 +1,43 @@
+.select {
+  width: 100%;
+}
+
+.select :global .react-select__ {
+  &control {
+    border: none;
+    box-shadow: none;
+    background: unset;
+    min-height: unset;
+    height: 100%;
+  }
+  &placeholder {
+    color: $input-placeholder;
+  }
+  &value-container {
+    padding: 0;
+    height: 100%;
+    * {
+      color: $input-color;
+    }
+  }
+  &input-container {
+    margin: 0;
+  }
+  &indicators {
+    @include space-x(0.5rem);
+  }
+  &indicator {
+    color: $input-icon;
+    cursor: pointer;
+    padding: 0;
+  }
+  &indicator-separator {
+    display: none;
+  }
+  &single-value {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
