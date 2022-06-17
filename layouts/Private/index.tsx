@@ -7,7 +7,12 @@ type PrivateProps = { redirect?: string; children: Function }
 
 const Private = ({ redirect = 'login', children }: PrivateProps) => {
   const router = useRouter()
-  const token = localStorage.getItem('token')
+  let token: any
+  if (typeof window === undefined) {
+    token = localStorage.getItem('token')
+  } else {
+    token = null
+  }
   const { status } = useQuery('auth', () => axios(`/auth/${token}`))
 
   useEffect(() => {

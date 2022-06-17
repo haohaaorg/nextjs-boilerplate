@@ -22,7 +22,18 @@ const Home: NextPage = () => {
     )
   }, [addToast])
 
-  return <main></main>
+  return (
+    <main>
+      <h1
+        style={{
+          margin: '6rem auto',
+          textAlign: 'center',
+        }}
+      >
+        Next.js Boilerplate V1
+      </h1>
+    </main>
+  )
 }
 
 export default Home
